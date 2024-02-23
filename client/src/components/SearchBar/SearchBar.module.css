@@ -1,0 +1,22 @@
+.imputForm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0;
+}
+
+.imputIcon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.input {
+  width: 220px;
+  padding: 10px 10px 10px 40px;
+  background-color: rgb(242, 244, 248);
+  border: none;
+  border-radius: 10px;
+}
+

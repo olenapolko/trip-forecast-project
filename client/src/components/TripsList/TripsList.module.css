@@ -1,0 +1,11 @@
+.tripsList {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 16px; 
+  }
+
+.tripsWrapper{
+  position: relative;
+    max-width: 730px;
+}

@@ -1,0 +1,112 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden auto;
+  z-index: 10;
+  background-color: rgba(78, 75, 75, 0.543);
+}
+
+.modalContent {
+  background-color: #fff;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 680px;
+  height: 500px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modalTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: rgb(61, 61, 61);
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalBtns {
+  align-self: flex-end;
+}
+
+.modalBtn {
+  width: auto;
+  color: white;
+  padding: 6px 15px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.modalBtn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.saveBtn {
+  border: 1px solid transparent;
+  background-color: rgb(1, 144, 233);
+}
+
+.cancelBtn {
+  background-color: #fff;
+  border: 1px solid rgb(232, 232, 232);
+  color: rgb(61, 61, 61);
+  margin-right: 10px;
+}
+
+.modalSelect,
+.modalInput[type="date"] {
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid rgb(232, 232, 232);
+  box-sizing: border-box;
+}
+
+.modalLabel {
+  display: block;
+  margin-bottom: 7px;
+  color: rgb(93, 93, 93);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.requiredAsterisk {
+  color: red;
+  margin-right: 4px;
+}
+
+.validationError {
+  color: red;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.closeIcon {
+  width: 12px;
+  height: 12px;
+}

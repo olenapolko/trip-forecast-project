@@ -1,0 +1,27 @@
+.scrollButton {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: #d7d5d5b0;
+    border: none;
+    position: absolute;
+    top: 75px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scrollButtonPrev {
+    left: 0; 
+  }
+  
+  .scrollButtonNext {
+    right: 0;
+  }
+
+  .scrollIcon{
+    width: 24px;
+    height: 24px;
+  }

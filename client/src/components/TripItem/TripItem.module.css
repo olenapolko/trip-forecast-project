@@ -1,0 +1,30 @@
+.tripItem {
+  width: 170px;
+  border: 0.25px solid rgb(232, 232, 232);
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tripItemImg {
+  height: 150px;
+  object-fit: cover;
+  align-self: center;
+}
+
+.tripItemCaption {
+  padding: 15px;
+}
+
+.tripItemCity {
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.tripItemData {
+  font-size: 8px;
+  color: rgb(159, 159, 159);
+}
