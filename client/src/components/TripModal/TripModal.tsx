@@ -53,7 +53,6 @@ const TripModal: React.FC<CreateTripModalProps> = ({
 
   const handleChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
-    console.log(typeof name, typeof value);
 
     setFormData((prevState) => ({
       ...prevState,
@@ -70,7 +69,6 @@ const TripModal: React.FC<CreateTripModalProps> = ({
     }
 
     const selectedCity = cities.find((city) => city.name === formData.name);
-    console.log(selectedCity);
     const cityIdAsString = selectedCity?._id.toString() || '';
 
     const tripData: LocalTrip = {

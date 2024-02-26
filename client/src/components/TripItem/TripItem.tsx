@@ -14,8 +14,6 @@ interface TripItemProps {
 }
 
 const TripItem: React.FC<TripItemProps> = ({ name, startDate, endDate, cityImg, selectTrip, imageUrl }) => {
-  console.log(cityImg, imageUrl);
-  
   const formattedStartDate = formatDateToDDMMYYYY(startDate);
   const formattedEndDate = formatDateToDDMMYYYY(endDate);
   

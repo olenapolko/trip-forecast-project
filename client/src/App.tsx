@@ -94,7 +94,7 @@ function App() {
         setForecastByDates(forecastByDates);
         setForecastByDay(forecastByDay);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     };
     getWeather(currentTrip);

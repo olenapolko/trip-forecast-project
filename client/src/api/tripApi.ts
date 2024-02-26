@@ -1,7 +1,6 @@
 import axios from 'axios';
 import LocalTrip from "src/interfaces/localTrip";
 import User from "src/interfaces/user";
-import { staticTripsList } from 'src/data/staticTripsList';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
@@ -17,10 +16,8 @@ export const fetchCities = async () => {
 export const fetchTrips = async (user: User) => {
   if (!user) {
     const localTrips = localStorage.getItem('localTrips') || '[]';
-    console.log("Local Trips:", localTrips);
     return JSON.parse(localTrips);
   }
-
 
   try {
     const url = `${BACKEND_URL}/api/trips/${user._id}/trips`;

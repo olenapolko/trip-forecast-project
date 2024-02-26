@@ -14,7 +14,7 @@ export const getWeatherByDates = async (trip: Trip) => {
     );
     return response.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -25,6 +25,6 @@ export const getWeatherByDay = async (trip: Trip) => {
     );
     return response.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
