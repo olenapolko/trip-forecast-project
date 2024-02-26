@@ -27,6 +27,18 @@ The development of Trip-app is supported by a comprehensive technology stack, en
 https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api
 
 
+## Screenshots
+
+# Unauthorized user
+![screenshot1](client/src/assets/screenshots/scr1.png)
+![screenshot2](client/src/assets/screenshots/scr2.png)
+![screenshot3](client/src/assets/screenshots/scr3.png)
+
+# Authorized user
+![screenshot4](client/src/assets/screenshots/scr4.png)
+![screenshot5](client/src/assets/screenshots/scr5.png)
+
+
 ## To start the project
 For starting the project localy, please copy the repo. 
 

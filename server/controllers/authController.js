@@ -6,7 +6,6 @@ import "dotenv/config.js";
 const { sign } = jwt;
 
 export const googleAuth = (req, res) => {
-  console.log("Attempting to authenticate with Google.");
   const authClient = new google.auth.OAuth2(
     process.env.GOOGLE_CLIENT_ID,
     process.env.GOOGLE_CLIENT_SECRET,
@@ -61,7 +60,6 @@ export const googleCallback = async (req, res) => {
     const accessToken = sign({ sub: user._id }, process.env.JWT_SECRET);
 
     res.cookie("accessToken", accessToken, { httpOnly: true });
-    console.log(userInfo.data);
     return res.redirect("http://localhost:3000");
   } catch (error) {
     console.error("Error in Google callback:", error);
@@ -70,7 +68,6 @@ export const googleCallback = async (req, res) => {
 };
 
 export const getUser = (req, res) => {
-  console.log(req.user);
   if (req.user) {
     res.json({ isLoggedIn: true, user: req.user });
   } else {
