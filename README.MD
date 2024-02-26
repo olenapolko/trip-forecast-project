@@ -29,12 +29,12 @@ https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weat
 
 ## Screenshots
 
-# Unauthorized user
+### Unauthorized user
 ![screenshot1](client/src/assets/screenshots/scr1.png)
 ![screenshot2](client/src/assets/screenshots/scr2.png)
 ![screenshot3](client/src/assets/screenshots/scr3.png)
 
-# Authorized user
+### Authorized user
 ![screenshot4](client/src/assets/screenshots/scr4.png)
 ![screenshot5](client/src/assets/screenshots/scr5.png)
 
