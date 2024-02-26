@@ -22,27 +22,27 @@ import { staticTripsList } from "./data/staticTripsList";
 
 function App() {
   const [trips, setTrips] = useState<Trip[]>([]);
-  const { user } = useAuth();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [search, setSearch] = useState<string>("");
   const [filteredTrips, setFilteredTrips] = useState<Trip[]>([]);
   const [currentTrip, setCurrentTrip] = useState<Trip>(trips[0]);
-
   const [forecastByDay, setForecastByDay] = useState<ForecastByDay | null>(
     null
   );
   const [forecastByDates, setForecastByDates] =
     useState<ForecastByDates | null>(null);
 
+  const { user } = useAuth();
+
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
-
+  
   const handleSaveTrip = (newTrip: Trip) => {
     setTrips((currentTrips) => {
       const updatedTrips = [...currentTrips, newTrip];
       return sortTripsByStartDate(updatedTrips);
     });
-  
+
     handleCloseModal();
   };
 
@@ -107,7 +107,11 @@ function App() {
           <MainContent>
             <Title />
             <SearchBar value={search} onChange={handleSearchChange} />
-            <TripsList trips={filteredTrips} selectTrip={handleCurrentTrip} onOpenModal={handleOpenModal} />
+            <TripsList
+              trips={filteredTrips}
+              selectTrip={handleCurrentTrip}
+              onOpenModal={handleOpenModal}
+            />
             <TripModal
               isOpen={isModalOpen}
               onClose={handleCloseModal}
@@ -118,7 +122,7 @@ function App() {
             )}
           </MainContent>
           <AsideContent>
-          <LoginControl />
+            <LoginControl />
             {forecastByDay && (
               <WeatherAside
                 address={forecastByDay.address}

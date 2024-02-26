@@ -29,8 +29,7 @@ const TripModal: React.FC<CreateTripModalProps> = ({
     endDate: "",
   });
   const [validationError, setValidationError] = useState("");
-  const [minEndDate, setMinEndDate] = useState(""); 
-
+  
   const { user } = useAuth();
   const userId = user?._id;
   const today = new Date();

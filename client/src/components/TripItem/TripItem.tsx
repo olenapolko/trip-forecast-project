@@ -1,6 +1,4 @@
 import React from 'react';
-import City from 'src/interfaces/city';
-import Trip from 'src/interfaces/trip';
 import styles from "./TripItem.module.css"
 import { formatDateToDDMMYYYY } from 'src/utils/formatDate'; 
 
@@ -13,7 +11,7 @@ interface TripItemProps {
   imageUrl: string;
 }
 
-const TripItem: React.FC<TripItemProps> = ({ name, startDate, endDate, cityImg, selectTrip, imageUrl }) => {
+const TripItem: React.FC<TripItemProps> = ({ name, startDate, endDate, cityImg, selectTrip, imageUrl }) => {  
   const formattedStartDate = formatDateToDDMMYYYY(startDate);
   const formattedEndDate = formatDateToDDMMYYYY(endDate);
   

@@ -11,7 +11,14 @@ export const saveTrip = async (req, res) => {
 
     await UserModel.findByIdAndUpdate(userId, { $push: { trips: trip._id } });
 
-    res.status(201).send(trip);
+    const city = await CityModel.findById(cityId).select("imageUrl").exec();
+
+    const tripWithCityImg = trip.toObject();
+    if (city && city.imageUrl) {
+      tripWithCityImg.cityImg = city.imageUrl;
+    }
+
+    res.status(201).send(tripWithCityImg);
   } catch (error) {
     console.error("Error creating a new trip:", error);
     res.status(500).json({ error: "Internal server error" });
